@@ -1,0 +1,17 @@
+<div class="backgroundVideo">
+  <video autoplay muted loop id="myVideo">
+    <source src="assets/videos/backgroundHome.mp4" type="video/mp4" />
+  </video>
+</div>
+<div class="container-fluid">
+  <div class="row align-items-center justify-content-md-center h-100">
+    <div class="col-md-3 boxLogin p-5 rounded shadow">
+      <img src="assets/img/pokemonLogo.png" width="100%" alt="" />
+      <form [formGroup]="login" (ngSubmit)="onValidatorLogin">
+        <input type="text" id="user" formControlName="username" placeholder="Usuario" />
+        <input type="Password" id=" password" formControlName="password" placeholder="Contraseña" />
+        <button class="btn btn-primary" type="submit">ingresar</button>
+      </form>
+    </div>
+  </div>
+</div>

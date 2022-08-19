@@ -1,0 +1,39 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100%;
+  opacity: 0.5;
+  z-index: 0;
+}
+.container-fluid {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  background-color: rgba(255, 203, 5, 0.5);
+  z-index: 1;
+  .boxLogin {
+    background-color: rgba(42, 117, 187);
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    & input {
+      width: 100%;
+      margin: 2% 0;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      display: flex;
+      color: rgba(42, 117, 187);
+      font-weight: bold;
+      flex-wrap: wrap;
+    }
+    input:focus {
+      border: 3px solid rgba(255, 203, 5);
+      outline: none;
+    }
+  }
+}
