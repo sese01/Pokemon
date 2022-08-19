@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "fEUb2s8nN9/7gyeZggtVN+KHZz+ztGNRB68iTc8ir4OolmM9FpScIRdqZhyT7FgY0HfV6onUyxIY2h8KdaFyjA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sese4\\Desktop\\trabajo u\\Programacion 2\\Pokemon\\Api\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sese4\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\sese4\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\sese4\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\sese4\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\sese4\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\sese4\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
