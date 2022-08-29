@@ -9,6 +9,7 @@ import { ProfileComponent } from './core/profile/profile.component';
 import { PokemonDescriptionComponent } from './shared/pokemon-description/pokemon-description.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ErrorTailorModule } from '@ngneat/error-tailor';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ErrorTailorModule.forRoot({
+      errors: {
+        useValue: {
+          required: 'El campo es requerido',
+          minlength: ({ requiredLength, actualLength }) => 
+                      `Expect ${requiredLength} but got ${actualLength}`,
+          invalidAddress: error => `Correo invalido`
+        }
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

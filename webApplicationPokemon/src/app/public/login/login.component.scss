@@ -15,11 +15,15 @@
     z-index: 1;
     .boxLogin {
       background-color: rgba(42, 117, 187);
-      display: block;
-      flex-wrap: nowrap;
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       min-width: 500px;
+      & form{
+        width: 100%;
+        
+      }
       & input {
         width: 100%;
         margin: 2% 0;
@@ -36,11 +40,17 @@
         outline: none;
       }
       .btn{
+        width: 100%;
         font-weight: bold;
         background-color:rgba(255, 203, 5);
         color: rgba(42, 117, 187);
+        justify-self: center;
 
       }
     }
+  }
+
+  .ng-invalid .ng-touched{
+    border:2px solid red !important;
   }
   
