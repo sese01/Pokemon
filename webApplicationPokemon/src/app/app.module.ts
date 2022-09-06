@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './public/home/home.component';
 import { LoginComponent } from './public/login/login.component';
 import { ProfileComponent } from './core/profile/profile.component';
-import { PokemonDescriptionComponent } from './shared/pokemon-description/pokemon-description.component';
+import { PokemonDescriptionComponent } from './shared/pokemonCards/pokemon-description.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorTailorModule } from '@ngneat/error-tailor';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ErrorTailorModule } from '@ngneat/error-tailor';
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     ErrorTailorModule.forRoot({
       errors: {
         useValue: {

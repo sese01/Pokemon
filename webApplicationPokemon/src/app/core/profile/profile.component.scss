@@ -1,0 +1,14 @@
+.bg-pokemon{
+    background-color: rgba(255, 203, 5, 1);
+}
+
+.lateral-bar{
+    min-height: 100vh;
+    .profile{
+        > .img-profile{
+            > img{
+                border-radius: 100%;
+            }
+        }
+    }
+}
