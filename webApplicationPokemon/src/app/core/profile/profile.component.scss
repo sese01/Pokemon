@@ -10,5 +10,22 @@
                 border-radius: 100%;
             }
         }
+        .add-photo{
+            margin-top: -50px;
+            position: relative;
+            left: 70%;
+            height: 60px;
+            font-size: 30px;
+            width: 60px;
+            border-radius:100%;
+        }
     }
+}
+
+app-add-pokemons{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
 }

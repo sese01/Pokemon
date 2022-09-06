@@ -1,19 +1,22 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { pokemonsService } from './service/pokemon.service';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { pokemonsService } from '../pokemonCards/service/pokemon.service';
 
 @Component({
-  selector: 'app-pokemon-description',
-  templateUrl: './pokemon-description.component.html',
-  styleUrls: ['./pokemon-description.component.scss'],
+  selector: 'app-add-pokemons',
+  templateUrl: './add-pokemons.component.html',
+  styleUrls: ['./add-pokemons.component.scss'],
 })
-export class PokemonDescriptionComponent implements OnInit {
-  // displayedColumns: string[] = ['position', 'image', 'name'];
+export class AddPokemonsComponent implements OnInit{
   data: any[] = [];
 
   pokemons = [];
 
+  closeResult = '';
+
   constructor(
+    private modalService: NgbModal,
     private pokemonService: pokemonsService,
     private router: Router
   ) {}
@@ -21,11 +24,10 @@ export class PokemonDescriptionComponent implements OnInit {
   ngOnInit(): void {
     this.getPokemons();
   }
-
   getPokemons() {
     let pokemonData;
 
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 1150; i++) {
       this.pokemonService.getPokemons(i).subscribe(
         (res) => {
           pokemonData = {
@@ -42,5 +44,11 @@ export class PokemonDescriptionComponent implements OnInit {
         }
       );
     }
+  }
+
+
+  open(content: any) {
+    this.modalService.open(content,{size: 'xl'});
+    
   }
 }

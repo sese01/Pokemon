@@ -11,6 +11,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorTailorModule } from '@ngneat/error-tailor';
 import { HttpClientModule } from '@angular/common/http';
+import { AddPokemonsComponent } from './shared/add-pokemons/add-pokemons.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LoginComponent,
     ProfileComponent,
-    PokemonDescriptionComponent
+    PokemonDescriptionComponent,
+    AddPokemonsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    MatIconModule,
     ErrorTailorModule.forRoot({
       errors: {
         useValue: {
@@ -36,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
           invalidAddress: error => `Correo invalido`
         }
       }
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
