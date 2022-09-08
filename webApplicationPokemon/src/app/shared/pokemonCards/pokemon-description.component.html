@@ -3,8 +3,11 @@
     <div class="card col-2 m-2"  *ngFor="let pokemon of data">
         <img class="card-img-top" src="{{pokemon.image}}" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">{{pokemon.name}}</h5>
-            <p class="card-text">{{pokemon.description}}</p>
+            <h5>Nombre Pokemon</h5>
+            <h4 class="card-title fw-normal">{{pokemon.name}}</h4>
+            <h5>Habilidades:</h5>
+            <p class="card-text h3 fw-normal">{{pokemon.abilitiesOne}}</p>
+            <p class="card-text h3 fw-normal">{{pokemon.abilitiesTwo}}</p>
             <a href="#" class="btn btn-primary">Remover</a>
         </div>
     </div>

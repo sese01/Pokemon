@@ -32,9 +32,12 @@ export class PokemonDescriptionComponent implements OnInit {
             position: i,
             image: res.sprites.front_default,
             name: res.name,
-            desciption: res.desciption,
+            abilitiesOne: res.abilities[0].ability.name,
+            abilitiesTwo: res.abilities[1].ability.name
+            ,
           };
           //ponemos la data que viene del servicio en un arreglo
+          console.info(res.abilities[0])
           this.data.push(pokemonData);
         },
         (err) => {

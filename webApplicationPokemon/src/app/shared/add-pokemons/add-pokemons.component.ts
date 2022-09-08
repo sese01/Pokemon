@@ -22,11 +22,13 @@ export class AddPokemonsComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    this.getPokemons();
   }
-  getPokemons() {
-    let pokemonData;
+ 
 
+
+  open(content: any) {
+    this.modalService.open(content,{size: 'xl'});
+    let pokemonData;
     for (let i = 1; i <= 1150; i++) {
       this.pokemonService.getPokemons(i).subscribe(
         (res) => {
@@ -34,7 +36,7 @@ export class AddPokemonsComponent implements OnInit{
             position: i,
             image: res.sprites.front_default,
             name: res.name,
-            desciption: res.desciption,
+            abilities: res.abilities[0].ability.name
           };
           //ponemos la data que viene del servicio en un arreglo
           this.data.push(pokemonData);
@@ -44,11 +46,6 @@ export class AddPokemonsComponent implements OnInit{
         }
       );
     }
-  }
-
-
-  open(content: any) {
-    this.modalService.open(content,{size: 'xl'});
     
   }
 }

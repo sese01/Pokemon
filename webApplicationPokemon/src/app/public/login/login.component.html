@@ -7,59 +7,24 @@
   <div class="row align-items-center justify-content-md-center h-100">
     <div class="col-md-3 boxLogin p-5 rounded shadow">
       <img src="assets/img/pokemonLogo.png" width="100%" alt="" />
-      <form [formGroup]="login" (ngSubmit)="onValidatorLogin">
+      <form [formGroup]="login"  autocomplete="off">
         <input
           type="email"
           id="user"
           formControlName="email"
           placeholder="Email"
-          [controlErrorsTpl]="emailError"
+       
+          autocomplete="off"
         />
         <input
           type="Password"
           id=" password"
           formControlName="password"
           placeholder="Contraseña"
-          [controlErrorsTpl]="passwordError"
+          
         />
-        <button class="btn btn-primary" [disabled]="login.invalid">Ingresar</button>
+        <button class="btn btn-primary" [disabled]="active " (click)="onValidatorLogin()">Ingresar</button>
       </form>
     </div>
   </div>
 </div>
-<ng-template let-error let-text="text" #emailError>
-  <ngb-alert *ngIf="error.required == true" [dismissible]="false">
-    <b>Error:</b>
-
-    <div>El campo es requerido</div>
-  </ngb-alert> 
-  <ngb-alert
-  *ngIf="
-  error?.minlength
-"
-[dismissible]="false"
-  >
-    <b>Error:</b>
-    No cumples con los caracteres necesarios que son ({{
-      error?.minlength?.requiredLength
-    }}), solo ingresaste:
-    {{ error?.minlength?.actualLength }}
-  </ngb-alert> 
-</ng-template>
-<ng-template let-error let-text="text" #passwordError>
-  <ngb-alert *ngIf="error.required == true " [dismissible]="false">
-    <b>Error:</b>
-
-    <div>El campo es requerido</div>
-  </ngb-alert>
-  <ngb-alert
-    [class]="{'d-none' : error?.minlength?.minlength + 1 == 8  }"
-    [dismissible]="false"
-  >
-    <b>Error:</b>
-    No cumples con los caracteres necesarios que son ({{
-      error?.minlength?.requiredLength
-    }}), solo ingresaste:
-    {{ error?.minlength?.actualLength }}
-  </ngb-alert>
-</ng-template>
