@@ -9,11 +9,11 @@ namespace PokemonWebService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NewUser : ControllerBase
+    public class User : ControllerBase
     {
         private readonly AplicationDbContext _context;
 
-        public NewUser(AplicationDbContext context) {
+        public User(AplicationDbContext context) {
             _context = context;
         }
         // GET: api/<NewUser>
@@ -53,7 +53,7 @@ namespace PokemonWebService.Controllers
         }
 
         // POST api/<NewUser>
-        [HttpPost]
+        [HttpPost("createUser")]
         public async Task<IActionResult> Post([FromBody] NewUsers newUsers)
         {
             try
@@ -67,8 +67,22 @@ namespace PokemonWebService.Controllers
             catch (Exception ex)
             {
 
-                return BadRequest(ex.Message);
+                return BadRequest("chupame la verga");
             }
+        }
+        [HttpPost("userLogin")]
+        public IActionResult Login(Login user) 
+        {
+            var userAvaible = _context.newUsers.Where(u => u.email == user.email && u.password == user.password).FirstOrDefault();
+            if (userAvaible != null)
+            {
+                return Ok("realizado");
+            }
+            else 
+            { 
+            return Ok("paila");
+            }
+
         }
 
         // PUT api/<NewUser>/5

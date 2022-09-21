@@ -6,9 +6,26 @@
 <div class="container-fluid">
   <div class="row align-items-center justify-content-md-center h-100">
     <div class="col-md-3 boxLogin p-5 rounded shadow">
-      <button routerLink="/login">
-        Iniciar Sesión
+      <button
+        class="btn btn-back mt-3"
+        (click)="return()"
+        [ngClass]="{ 'd-none': showLogin == 0 }"
+      >
+        <mat-icon>keyboard_backspace</mat-icon>
       </button>
+      <img src="assets/img/pokemonLogo.png" width="100%" alt="" />
+
+      <div *ngIf="showLogin == 0" class="w-100">
+        <button class="btn btn-primary mt-3" (click)="login()">Ingresar</button>
+        <button class="btn btn-register btn-primary mt-3" (click)="register()">
+          Registrarse
+        </button>
+      </div>
+      <app-login
+        [Inicio]="showLogin == 1"
+        [Registrarse]="showLogin == 2"
+        [ngClass]="{ 'd-none': showLogin == 0 , 'animate': showLogin != 0 }"
+      ></app-login>
     </div>
   </div>
 </div>

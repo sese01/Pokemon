@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './core/profile/profile.component';
 import { HomeComponent } from './public/home/home.component';
-import { LoginComponent } from './public/login/login.component';
+import { LoginComponent } from './shared/login/login.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},

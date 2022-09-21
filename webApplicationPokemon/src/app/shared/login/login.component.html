@@ -1,0 +1,70 @@
+
+<div class="container-fluid">
+  <div class="row align-items-center justify-content-md-center h-100">
+    <div class="col-md-3 boxLogin p-5 rounded ">
+      <div *ngIf="Inicio" class="w-100">
+
+        <form [formGroup]="login"  autocomplete="off" (ngSubmit)="onValidatorLogin(login.value)">
+          <input
+          type="email"
+          id="user"
+          formControlName="email"
+          placeholder="Email"
+          
+          autocomplete="off"
+          />
+          <input
+          type="Password"
+          id=" password"
+          formControlName="password"
+          placeholder="Contraseña"
+          
+          />
+          <button class="btn btn-primary" [disabled]="active " type="submit">Ingresar</button>
+        </form>
+      </div>
+      <div *ngIf="Registrarse" class="w-100">
+
+        <form [formGroup]="register"  autocomplete="off" (ngSubmit)="onValidatorRegister(register.value)">
+          <input
+          type="email"
+          id="user"
+          formControlName="email"
+          placeholder="Email"
+          
+          autocomplete="off"
+          />
+          <input
+          type="Password"
+          id=" password"
+          formControlName="password"
+          placeholder="Contraseña"
+          
+          />
+          <input
+          type="text"
+          id=" password"
+          formControlName="name"
+          placeholder="Nombre"
+          
+          />
+          <input
+          type="text"
+          id=" password"
+          formControlName="city"
+          placeholder="Ciudad"
+          
+          />
+          <input
+          type="number"
+          id=" password"
+          formControlName="age"
+          placeholder="Edad"
+          
+          />
+          <button class="btn btn-primary" [disabled]="active" type="submit" >Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

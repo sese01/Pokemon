@@ -7,6 +7,7 @@ namespace PokemonWebService
     {
         public DbSet<NewUsers> newUsers { get; set; }
 
+
         public AplicationDbContext(DbContextOptions<AplicationDbContext> options) : base(options)
         { }
     }
