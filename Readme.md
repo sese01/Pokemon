@@ -14,12 +14,9 @@
 
 5. Tecnologias usadas
 
-
 6. Contribuyente
-### Sebastian Eduardo Gomez
 
 7. Desarrollador
-### Sebastian Eduardo Gomez
 
 8. Licencia
 
