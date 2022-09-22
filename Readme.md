@@ -4,7 +4,28 @@
 
 # Indice
 
-# Descripcion de proyecto
+1. Descripcion de proyecto
+
+2. Estado del proyecto
+
+3. Caracteristicas de la aplicacion y demostracion 
+
+4. Acceso al proyecto
+
+5. Tecnologias usadas
+
+
+6. Contribuyente
+### Sebastian Eduardo Gomez
+
+7. Desarrollador
+### Sebastian Eduardo Gomez
+
+8. Licencia
+
+9. Conclusiones
+
+10. Descripcion de proyecto
 
 # Estado del proyecto
 
