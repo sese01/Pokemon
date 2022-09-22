@@ -21,7 +21,7 @@ namespace PokemonWebService.Controllers
         public async Task<IActionResult> Get(){
             try
             {
-                var listUsers = await _context.newUsers.ToArrayAsync();
+                var listUsers = await _context.users.ToArrayAsync();
                 return Ok(listUsers);
             }
             catch (Exception)
@@ -37,7 +37,7 @@ namespace PokemonWebService.Controllers
         {
             try
             {
-                var newUsers = await _context.newUsers.FindAsync(id);
+                var newUsers = await _context.users.FindAsync(id);
                 if (newUsers == null) 
                 { 
                 return NotFound();
@@ -54,40 +54,51 @@ namespace PokemonWebService.Controllers
 
         // POST api/<NewUser>
         [HttpPost("createUser")]
-        public async Task<IActionResult> Post([FromBody] NewUsers newUsers)
+        public async Task<IActionResult> Post([FromBody] Users newUsers)
         {
             try
             {
-                _context.Add(newUsers);
-                await _context.SaveChangesAsync();  
+                var userAvaible = _context.users.Where(u => u.email == newUsers.email ).FirstOrDefault();
+                if (userAvaible == null)
+                {
+                    _context.Add(newUsers);
+                    await _context.SaveChangesAsync();
 
-                return Ok(newUsers);
+                    return Ok(newUsers);
+                }
+                else { 
+                    return Ok("no se pudo realizar nada");
+                }
+               
 
             }
             catch (Exception ex)
             {
 
-                return BadRequest("chupame la verga");
+                return BadRequest("no se pudo realizar nada 2");
             }
         }
         [HttpPost("userLogin")]
         public IActionResult Login(Login user) 
         {
-            var userAvaible = _context.newUsers.Where(u => u.email == user.email && u.password == user.password).FirstOrDefault();
-            if (userAvaible != null)
-            {
-                return Ok("realizado");
-            }
-            else 
-            { 
-            return Ok("paila");
-            }
+            
+                var userAvaible = _context.users.Where(u => u.email == user.email && u.password == user.password).FirstOrDefault();
+                if (userAvaible != null)
+                {
+
+                    return Ok(user.token = Guid.NewGuid().ToString());
+                }
+                else
+                {
+                    return Ok("paila");
+                }
+            
 
         }
 
         // PUT api/<NewUser>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] NewUsers newUsers)
+        public async Task<IActionResult> Put(int id, [FromBody] Users newUsers)
         {
             try
             {

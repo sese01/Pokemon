@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PokemonWebService.Migrations
 {
-    public partial class v100 : Migration
+    public partial class v101 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,7 @@ namespace PokemonWebService.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "newUsers",
+                name: "users",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -30,7 +30,7 @@ namespace PokemonWebService.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_newUsers", x => x.Id);
+                    table.PrimaryKey("PK_users", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
         }
@@ -38,7 +38,7 @@ namespace PokemonWebService.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "newUsers");
+                name: "users");
         }
     }
 }
