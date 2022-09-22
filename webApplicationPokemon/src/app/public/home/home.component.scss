@@ -15,11 +15,14 @@
   z-index: 1;
   .boxLogin {
     background-color: rgba(42, 117, 187);
-    display: block;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-width: 500px;
+    & form {
+      width: 100%;
+    }
     & input {
       width: 100%;
       margin: 2% 0;
@@ -35,5 +38,46 @@
       border: 3px solid rgba(255, 203, 5);
       outline: none;
     }
+    .btn {
+      width: 100%;
+      font-weight: bold;
+      background-color: rgba(255, 203, 5);
+      color: rgba(42, 117, 187);
+      justify-self: center;
+    }
+    .btn-register {
+      background-color: red;
+      color: white;
+    }
+    .btn-back {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      left: -43%;
+    }
   }
 }
+
+.ng-invalid .ng-touched {
+  border: 2px solid red !important;
+}
+
+.animate{
+  animation: myAnim 0.5s ease 0s 1 normal forwards;
+
+}
+
+@keyframes myAnim {
+	0%
+ {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+  
+

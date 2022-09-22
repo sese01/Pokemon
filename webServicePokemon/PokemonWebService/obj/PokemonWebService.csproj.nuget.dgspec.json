@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sese4\\Desktop\\trabajo u\\Programacion 2\\Pokemon\\Api\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj": {}
+    "D:\\Universidad\\Pokemon\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sese4\\Desktop\\trabajo u\\Programacion 2\\Pokemon\\Api\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj": {
+    "D:\\Universidad\\Pokemon\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sese4\\Desktop\\trabajo u\\Programacion 2\\Pokemon\\Api\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj",
+        "projectUniqueName": "D:\\Universidad\\Pokemon\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj",
         "projectName": "PokemonWebService",
-        "projectPath": "C:\\Users\\sese4\\Desktop\\trabajo u\\Programacion 2\\Pokemon\\Api\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj",
+        "projectPath": "D:\\Universidad\\Pokemon\\webServicePokemon\\PokemonWebService\\PokemonWebService.csproj",
         "packagesPath": "C:\\Users\\sese4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sese4\\Desktop\\trabajo u\\Programacion 2\\Pokemon\\Api\\webServicePokemon\\PokemonWebService\\obj\\",
+        "outputPath": "D:\\Universidad\\Pokemon\\webServicePokemon\\PokemonWebService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sese4\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://app-psnugetserver.azurewebsites.net/nuget": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -41,6 +40,28 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -52,7 +73,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

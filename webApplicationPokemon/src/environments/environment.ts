@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://pokeapi.co/api/v2'
+  baseUrl: 'https://pokeapi.co/api/v2',
+  urlApp:'https://localhost:7085/',
+  urlApiAutentication: 'api/user',
+  urlCreate:'/createUser',
+  urlLogin:'/userlogin',
    
   
 };

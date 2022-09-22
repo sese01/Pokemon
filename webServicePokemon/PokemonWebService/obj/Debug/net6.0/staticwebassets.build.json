@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "y7hK3kq4pBdpCnlRSp4R0ifnZOZiMXLU56QQsyuQqow=",
+  "Source": "PokemonWebService",
+  "BasePath": "_content/PokemonWebService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
