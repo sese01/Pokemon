@@ -26,7 +26,7 @@
 
 # Estado del proyecto
 
-## EN DESARROLLO
+** EN DESARROLLO **
 
 # Caracteristicas de la aplicacion y demostracion 
 
