@@ -13,6 +13,7 @@ export class AddPokemonsComponent implements OnInit {
   data: any[] = [];
 
   closeResult = '';
+  public isChecked = false;
 
   pokemons: Model[] = [];
   public show: boolean = false;
@@ -26,21 +27,29 @@ export class AddPokemonsComponent implements OnInit {
   ngOnInit(): void {}
 
   pokemonsData: Model[] = [];
+
+  comparenumbers(a:any,b:any){
+    return a-b
+  }
   onChangePokemon($event: any) {
     let id = $event.target.value;
-    let isChecked = $event.target.checked;
+    this.isChecked = $event.target.checked;
+    let disabled = $event.target.disabled;
     
-
+    let index = this.pokemonsData.indexOf(id);
+   
+  
     if (this.pokemonsData.length < 5) {
-      if (isChecked == true) {
+      if (this.isChecked == true) {
         this.pokemonsData.push(id);
-        this.pokemonsData.sort();
+        this.pokemonsData.sort(this.comparenumbers);
       } else {
-        this.pokemonsData.splice(this.pokemonsData.indexOf(id));
+        this.pokemonsData.splice(index,1);
       }
     }else{
-      alert('paila')
-      isChecked = false;
+      this.isChecked === false
+       alert('paila')
+      
     }
     console.info(this.pokemonsData);
 

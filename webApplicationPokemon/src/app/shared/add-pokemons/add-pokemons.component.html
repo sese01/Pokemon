@@ -21,7 +21,11 @@
             <h5 class="card-title">{{ pokemon.name }}</h5>
             <p class="card-text">{{ pokemon.abilities }}</p>
             <label>
-              <input type="checkbox" [value]="i + 1" (change)="onChangePokemon($event)" [checked]="show" />
+              <input
+                type="checkbox"
+                [value]="i + 1"
+                (change)="onChangePokemon($event)"
+              />
               Agregar
             </label>
           </div>
