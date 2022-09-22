@@ -36,6 +36,8 @@
 
 # Acceso al proyecto
 
+https://github.com/sese01/Pokemon/
+
 # Tecnologias usadas
 [![Recurso-2-100.jpg](https://i.postimg.cc/1XcnRwGD/Recurso-2-100.jpg)](https://postimg.cc/30NJnybw)
 
@@ -47,7 +49,11 @@
 
 # Licencia
 
+[![Picture1.png](https://i.postimg.cc/Jzhqgz8p/Picture1.png)](https://postimg.cc/QHR1KsH7)
+
 # Conclusiones
+
+Es una experiencia super enriquecedora, como iba avanzando el proyecto cada vez es mas satisfactorio ver lo que se realizo es increíble como unas líneas de código se vuelvan algo tan espectacular espero por culminar mi proyecto para poder seguir en constante aprendizaje creo que elegir esta carrera fue la mejor opción que pude tomar Agradezco al profesor por esta oportunidad de dejar que apliquemos nuestro conocimiento  de una manera agradable y nos guie en el trascurso de esto.
 
 
 
