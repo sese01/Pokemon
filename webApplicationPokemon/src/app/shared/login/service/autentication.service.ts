@@ -22,11 +22,16 @@ export class AutenticationService {
   }
 
 
-  loginByEmail(form:Login) {
-    return this.http.post(this.app + this.api+ this.login, form,{
-      responseType: 'text',
-    });
+  // loginByEmail(form:Login) {
+  //   return this.http.post(this.app + this.api+ this.login, form,{
+  //     responseType: 'text',
+  //   });
 
+  // }
+  loginByEmail(form:Login) {
+     return this.http.post(this.app + this.api+ this.login, form,{
+      responseType: "text",
+     });
   }
   createUser(form:User) {
     return this.http.post(this.app + this.api+ this.registro, form,{

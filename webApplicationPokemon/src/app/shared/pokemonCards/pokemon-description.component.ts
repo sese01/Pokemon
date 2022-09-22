@@ -37,7 +37,6 @@ export class PokemonDescriptionComponent implements OnInit {
             ,
           };
           //ponemos la data que viene del servicio en un arreglo
-          console.info(res.abilities[0])
           this.data.push(pokemonData);
         },
         (err) => {

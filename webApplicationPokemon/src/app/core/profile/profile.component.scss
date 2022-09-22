@@ -2,6 +2,7 @@
     background-color: rgba(255, 203, 5, 1);
 }
 
+
 .lateral-bar{
     min-height: 100vh;
     .profile{
@@ -22,10 +23,22 @@
     }
 }
 
-app-add-pokemons{
-    display: block;
+.logOut{
+    display: flex;
     position: fixed;
     bottom: 0;
     right: 0;
     margin: 20px;
+    button{
+        margin-right: 20px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        border: 1px solid black;
+    }
+    app-add-pokemons{
+        
+    }
+
 }

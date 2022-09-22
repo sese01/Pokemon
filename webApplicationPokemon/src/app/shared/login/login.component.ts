@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
     this.GetUsers();
+    this.checkLocalStorage();
   }
   GetUsers() {
     this._loginService.getUsers().subscribe((data) => {
@@ -68,17 +69,34 @@ export class LoginComponent implements OnInit {
   // }
   isUserValid: boolean = false;
 
-  onValidatorLogin(form: Login) {
-    this._loginService.loginByEmail(form).subscribe((res) => {
-      console.info(res)
-      if (res == 'paila') {
-        this.isUserValid = false;
-        alert('Fallido');
-      }else{
-        this.isUserValid = true;
+  // onValidatorLogin(form: Login) {
+  //   this._loginService.loginByEmail(form).subscribe((res) => {
+  //     console.info(res)
+  //     if (res == 'paila') {
+  //       this.isUserValid = false;
+  //       alert('Fallido');
+  //     }else{
+  //       this.isUserValid = true;
         
+  //       this.router.navigate(['/profile']);
+  //     }
+  //   });
+  // }
+
+  checkLocalStorage(){
+    if(localStorage.getItem('token')){
+      this.router.navigate(['/profile']);
+    }
+  }
+
+  onValidatorLogin(form: Login) {
+    this._loginService.loginByEmail(form).subscribe(res => {
+      let dataResponse = res;
+      if(dataResponse != 'paila'){
+        localStorage.setItem("token",res);
         this.router.navigate(['/profile']);
       }
+
     });
   }
 
