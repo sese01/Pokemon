@@ -8,6 +8,8 @@
 
 # Estado del proyecto
 
+## EN DESARROLLO
+
 # Caracteristicas de la aplicacion y demostracion 
 
 ### Dar click en el video
@@ -20,6 +22,7 @@
 [![Recurso-2-100.jpg](https://i.postimg.cc/1XcnRwGD/Recurso-2-100.jpg)](https://postimg.cc/30NJnybw)
 
 # Contribuyente
+### Sebastian Eduardo Gomez
 
 # Desarrollador
 ### Sebastian Eduardo Gomez
